@@ -16,6 +16,13 @@ exports[`App should match a snapshot 1`] = `
       addReservation={[Function]}
     />
   </div>
+  <button
+    className="sort-btn"
+    onClick={[Function]}
+    type="button"
+  >
+    Sort by Newest
+  </button>
   <div
     className="resy-container"
   >

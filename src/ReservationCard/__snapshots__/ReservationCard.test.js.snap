@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReservationCard should match a snapshot 1`] = `
+<div
+  className="card"
+>
+  <h2>
+    Pol
+  </h2>
+  <p>
+    10/17
+  </p>
+  <p>
+    7:00 pm
+  </p>
+  <p>
+    Number of guests: 10
+  </p>
+  <button
+    className="cancel-btn"
+    id={1}
+    onClick={[Function]}
+    type="button"
+  >
+    Cancel
+  </button>
+</div>
+`;
