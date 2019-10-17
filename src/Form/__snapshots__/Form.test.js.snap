@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should match a snapshot 1`] = `
+<Fragment>
+  <input
+    name="name"
+    onChange={[Function]}
+    placeholder="Name"
+    type="text"
+    value=""
+  />
+  <input
+    name="date"
+    onChange={[Function]}
+    placeholder="Date (mm/dd)"
+    type="text"
+    value=""
+  />
+  <input
+    name="time"
+    onChange={[Function]}
+    placeholder="Time"
+    type="text"
+    value=""
+  />
+  <input
+    name="number"
+    onChange={[Function]}
+    placeholder="Number of guests"
+    type="text"
+    value=""
+  />
+  <button
+    onClick={[Function]}
+    type="submit"
+  >
+    Make Reservation
+  </button>
+</Fragment>
+`;

@@ -19,6 +19,16 @@ class Form extends Component {
   handleClick(event) {
     event.preventDefault();
     this.props.addReservation(this.state);
+    this.clearInputs()
+  }
+
+  clearInputs = () => {
+    this.setState({
+      name: '',
+      date: '',
+      time: '',
+      number: ''
+    })
   }
 
   render() {
