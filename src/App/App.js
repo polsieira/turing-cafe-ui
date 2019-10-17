@@ -64,13 +64,15 @@ class App extends Component {
   }
 
   render() {
+
+    const text = this.state.sort === 'up' ? 'Newest' : 'Oldest'
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
           <Form addReservation={this.addReservation} />
         </div>
-        <button className='sort-btn' type='button' onClick={this.sortReservations}>Sort</button>
+        <button className='sort-btn' type='button' onClick={this.sortReservations}>{`Sort by ${text}`}</button>
         <div className='resy-container'>
           <ReservationContainer deleteReservation={this.deleteReservation} reservations={this.state.reservations} />
         </div>
