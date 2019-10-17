@@ -9,7 +9,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      reservations: []
+      reservations: [],
+      sort: 'up'
     }
   }
 
@@ -45,6 +46,23 @@ class App extends Component {
       .catch(error => console.error(error));
   }
 
+  sortReservations = () => {
+    let direction = '';
+    const sortedReservations = this.state.reservations.sort((reservationA, reservationB) => {
+      if (this.state.sort === 'up') {
+        direction = 'down';
+        return reservationB.date > reservationA.date ? 1 : -1
+      } else {
+        direction = 'up';
+        return reservationB.date < reservationA.date ? 1 : -1
+      }
+    })
+    this.setState({
+      reservation: sortedReservations,
+      sort: direction
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -52,6 +70,7 @@ class App extends Component {
         <div className='resy-form'>
           <Form addReservation={this.addReservation} />
         </div>
+        <button className='sort-btn' type='button' onClick={this.sortReservations}>Sort</button>
         <div className='resy-container'>
           <ReservationContainer deleteReservation={this.deleteReservation} reservations={this.state.reservations} />
         </div>
