@@ -1,0 +1,19 @@
+input,
+button {
+  height: 30px;
+  width: 15%;
+}
+
+input {
+  font-size: 20px;
+  padding: 5px;
+}
+
+button {
+  background: teal;
+  color: white;
+  font-size: 12px;
+  &:hover {
+    cursor: pointer;
+  }
+}
