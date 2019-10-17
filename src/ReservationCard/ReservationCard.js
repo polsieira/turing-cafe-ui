@@ -1,7 +1,7 @@
 import React from 'react';
 import '../ReservationCard/ReservationCard';
 
-const ReservationCard = ({ name, date, time, numberOfGuests }) => {
+const ReservationCard = ({ id, name, date, time, numberOfGuests, deleteReservation }) => {
 
   return (
     <>
@@ -9,7 +9,7 @@ const ReservationCard = ({ name, date, time, numberOfGuests }) => {
       <p>{date}</p>
       <p>{time}</p>
       <p>{`Number of guests: ${numberOfGuests}`}</p>
-      <button type='button'>Cancel</button>
+      <button type='button' id={id} onClick={(event) => { deleteReservation(event.target.id) }}>Cancel</button>
     </>
   )
 
